@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/component/home/index",
+    "pages/component/me/index",
+    "pages/component/fm/index",
+    "pages/component/recsongs/index",
+    "pages/component/record/index",
+    "pages/component/playlist/index",
+    "pages/component/playing/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#BB2C08",
+    "navigationBarTitleText": "clound-music",
+    "backgroundColor": "#fbfcfd"
+  },
+  "tabBar": {
+    "color": "#aaa",
+    "selectedColor": "#fff",
+    "borderStyle": "white",
+    "backgroundColor": "#212121",
+    "list":[
+      {
+        "pagePath":"pages/component/home/index",
+        "text": "发现音乐"
+      },
+      {
+        "pagePath":"pages/component/me/index",
+        "text": "我的音乐"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 20000,
+    "connectSocket": 20000,
+    "uploadFile": 20000,
+    "downloadFile": 20000
+  },
+  "sitemapLocation": "sitemap.json"
+}

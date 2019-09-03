@@ -1,0 +1,19 @@
+<view class="tab" id="header">
+    <view class="tab-item {{tab==1?'tbi-cur':''}}" bindtap='switchtab' data-t="1">
+        <text class="tbi-text">最近一周</text>
+    </view>
+    <view class="tab-item {{tab==0?'tbi-cur':''}}" bindtap='switchtab' data-t="0">
+        <text class="tbi-text">所有时间</text>
+    </view>
+</view>
+<block wx:if="{{loadings}}">
+    <view class="tab_cnt" hidden="{{tab==0}}">
+        <block wx:if="{{weekData.code!=200}}">
+            <view class="cntloading">{{weekData.msg}}1</view>
+        </block>
+        <block wx:else>
+        
+        </block>
+    </view>
+    
+</block>
