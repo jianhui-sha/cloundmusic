@@ -239,6 +239,27 @@ App({
       })
     }
   },
+  shuffleplay:function (shuffle) {
+    //切换播放模式
+    var that = this;
+    that.globalData.shuffle = shuffle;
+    if(shuffle == 1 ) {
+      that.globalData.list_am = that.globalData.list_sf;
+    }else if(shuffle == 2){
+      that.globalData.list_am = [that.globalData.curplay]
+    }else {
+      that.globalData.list_am = [].concat(that.globalData.list_sf);
+      var sort = that.globalData.list_am;
+      sort.sort(function () {
+        return Math.random() - (0.5) ? 1 : -1;
+      })
+    }
+    for(let s in that.globalData.list_am) {
+      if(that.globalData.list_am[s].id == that.globalData.curplay.id) {
+        that.globalData.index_am = s
+      }
+    }
+  },
   globalData: {
     hasLogin:false,
     hide:false,
