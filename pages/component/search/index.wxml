@@ -1,0 +1,24 @@
+<import src="../../../utils/playlist.wxml" />
+<import src="../../../utils/loading.wxml" />
+<view id="search_header">
+    <view id="search_input">
+        <form bindsubmit="searchFinput">
+            <view class="form">
+                <view class="form_input">
+                    <view >
+                        <icon type="search" size="16" color="#aaa" />
+                    </view>
+                    <input type="text" auto-focus maxlength="20" name="name" bindinput="inputtext" placeholder="搜索单曲、歌手、专辑等" value="{{value}}" />
+                    <view class="sf_clear" hidden="{{!value}}" bindtap="clear_kw">
+                        <icon  type="clear" size="16" color="#aaa" />
+                    </view>
+                </view>
+                <view class="button">
+                    <button from-type="submit" plain="true">
+                        搜索
+                    </button>
+                </view>
+            </view>
+        </form>
+    </view>
+</view>
