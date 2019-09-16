@@ -7,7 +7,8 @@
     "pages/component/record/index",
     "pages/component/playlist/index",
     "pages/component/playing/index",
-    "pages/component/search/index"
+    "pages/component/search/index",
+    "pages/component/mv/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
